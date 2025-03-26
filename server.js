@@ -26,7 +26,7 @@ let server = http.createServer(app)
 
 
 
-const port = process.env.PORT;
+const port = process.env.PORT || 5000 || 3500;
 server.listen(port, () => {
     console.log("The app is running on port " + port)
 })
