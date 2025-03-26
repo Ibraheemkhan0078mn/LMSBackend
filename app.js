@@ -101,6 +101,22 @@ app.use("/api/v1/ProductRoutes", ProductRoutes)
 
 
 
+
+
+
+
+
+
+// Error handling with CORS headers
+app.use((err, req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "https://lms-frontend-gamma-ecru.vercel.app");
+    res.header("Access-Control-Allow-Credentials", "true");
+    res.status(500).json({ error: err.message });
+});
+
+
+
+
 export default app;
 
 
