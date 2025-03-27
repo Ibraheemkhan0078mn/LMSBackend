@@ -20,12 +20,14 @@ import AdminRoutes from './routes/AdminRoutes.js'
 
 
 // ✅ List your frontend's deployed URL (NO TRAILING SLASH)
-app.use(cors({
-    origin: "https://lms-frontend-gamma-ecru.vercel.app",
-    credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"]
-}));
+app.use(cors(
+//     {
+//     origin: "https://lms-frontend-gamma-ecru.vercel.app",
+//     credentials: true,
+//     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+//     allowedHeaders: ["Content-Type", "Authorization"]
+// }
+));
 
 
 app.use(express.json())
